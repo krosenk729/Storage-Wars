@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Storage Wars</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Learning to use storage">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		.center{
+			text-align: center;
+		}
+		.hidden{
+			display: none;
+		}
+		.all-stores{
+			display: flex;
+			justify-content: space-around;
+		}
+		footer{
+			width: 100%;
+			position: fixed;
+			bottom: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: space-around; /*fallback*/
+			justify-content: space-evenly;
+			z-index: 1;
+			background: white;
+		}
+		canvas{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+		}
+	</style>
+</head>
+<body>
+	<main class="center">
+		<h1>Where is Your Storage?</h1>
+
+		<div class="all-stores">
+
+			<div class="store sess-store">
+				<h3>Session Storage</h3>
+				<p>This info will stay for a <strong><em>session</em></strong>. So if you close this tab or open a new one, this info will not be saved. But if you refresh this tab, it will still appear!</p>
+				<div class="store-items" id="sess-items">
+				</div>
+			</div>
+
+
+			<div class="store local-store">
+				<h3>Local Storage</h3>
+				<p>This info will stay for a <strong><em>client browser</em></strong> with no expiration. This storage will show up in a new tab or window! But if you clear your cookies for all time then be prepared to say goodbye to local as well (rules change from browser to browser).</p>
+				<div class="store-items" id="local-items">
+				</div>
+			</div>
+
+
+			<div class="store cookie-store">
+				<h3>Cookie Storage</h3>
+				<p>This info will stay for a <strong><em>document</em></strong> until it expires (so when you think you're deleting a cookie, it is actually being set to expire in the past). Cookies are all stored in one long URI component, so these are being parsed as they show up on your screen.</p>
+				<p>More fun facts? Cookies are part of the Browser Document while Local and Session storage are part of the Browser Window. So running this as a local file and trying to store cookies may get craaaazy</p>
+				<div class="store-items" id="cookie-items">
+				</div>
+			</div>
+
+
+
+			<div class="store index-store">
+				<h3>IndexDB Storage</h3>
+				<p>This info will stay for a <strong><em>client browser</em></strong> and follows local storage rules. But it follows database storage and retrieval methods. The support on mobile is spotty but it is a greay way to store ad-hoc data.</p>
+				<p>There is a little more setup involved with indexDB because you have to create a pseudo-schema in an objectStore but you can do it - I beleive in you.</p>
+				<div class="store-items" id="index-items">
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<footer>
+		<h2>Store Something Else</h2>
+		<form id="store-form">
+			<fieldset>
+			<label class="" for="new-name">Name</label>
+			<input type="text" name="new-name" id="new-name">
+			</fieldset>
+			<fieldset>
+			<label class="" for="new-val">Value</label>
+			<input type="text" name="new-val" id="new-val">
+			</fieldset>
+			<input type="submit" class="add-to-store" name="add-to-store">
+		</form>
+	</footer>
+	<canvas>
+		<div class="backup-fill"></div>
+	</canvas>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/storage.js"></script>
+	<!-- <script type="text/javascript" src="js/snow2.js"></script> -->
+</body>
+</html>
