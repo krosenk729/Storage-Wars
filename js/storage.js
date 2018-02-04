@@ -80,16 +80,13 @@ let currentStore = {
 		let db;
 
 		request.onsuccess = function(event){
-			console.log('db success event', event.target.result, 'request results', request.result);
 			db = request.result;
 
-			// [myStorageName] might not need brackets
 			let transxtion = db.transaction([myStorageName], 'readwrite');
 			transxtion.oncomplete = (e) => { console.log('transxtion complete', e); };
 			transxtion.onerror = (e) => { console.log('transxtion error', e); };
 
 			let objStore = transxtion.objectStore(myStorageName);
-			console.log('about to add ', {name: newName, val: newVal});
 
 			let objReq = objStore.add({name: newName, val: newVal});
 			objReq.onsuccess = (e) => console.log('add success', e);
@@ -104,7 +101,6 @@ let currentStore = {
 	retrieveIndexed: function(){
 		window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 		let request = window.indexedDB.open(myStorageName, 1); 
-		console.log('retrieveIndexed request ', request);
 		let db ;
 
 		if(!request){ return false; }

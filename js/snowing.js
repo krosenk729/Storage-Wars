@@ -1,4 +1,5 @@
-const canvas = document.querySelector('canvas'), 
+(function(){ 
+	const canvas = document.querySelector('canvas'), 
 	ctx = canvas.getContext('2d'),
 	MAXW = 2024,
 	MAXH = 2400;
@@ -6,7 +7,7 @@ const canvas = document.querySelector('canvas'),
 let width = canvas.width = $('body').width();
 let height = canvas.height = $('body').height();
 $(window).on('resize', function(){
-	console.log('resize');
+	//console.log('resize');
 	width = canvas.width = $('body').width();
 	height = canvas.height = $('body').height();
 });
@@ -53,7 +54,7 @@ function makeSnow(){
 			ittTiny += 80;
 		}
 	}
-	console.log('teeny', teenySnowBalls, 'tiny', tinySnowBalls);
+	// console.log('teeny', teenySnowBalls, 'tiny', tinySnowBalls);
 }
 
 function makeItSnow(){
@@ -74,4 +75,4 @@ function makeItSnow(){
 }
 makeSnow();
 makeItSnow();
-//setInterval(makeItSnow, 100);
+})();
