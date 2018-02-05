@@ -61,9 +61,9 @@ main:before {
       box-shadow: 5px 5px 0 #b4e7f8;
       -moz-box-shadow: 5px 5px 0 #b4e7f8;
       -webkit-box-shadow: 5px 5px 0 #b4e7f8; }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 720px) {
     .all-stores {
-      margin-bottom: 50px; }
+      margin-bottom: 160px; }
     .all-stores .store {
       flex-basis: 100%; } }
 
@@ -97,7 +97,7 @@ footer {
     footer input[type='submit']:active {
       color: #ffffff;
       transform: scale(0.96); }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 720px) {
     footer form {
       display: block;
       text-align: center; }

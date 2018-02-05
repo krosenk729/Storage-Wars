@@ -94,9 +94,9 @@ main{
 		}
 	}
 
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 720px) {
 		&{
-			margin-bottom: 50px;
+			margin-bottom: 160px;
 		}
 
 		.store{
@@ -145,7 +145,7 @@ footer{
 		}
 	}
 
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 720px) {
 		form{
 			display: block;
 			text-align: center;

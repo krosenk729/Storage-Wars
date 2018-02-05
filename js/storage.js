@@ -10,6 +10,7 @@ $(document).ready(function(){
 
 	$('#store-form').on('submit', function(event){
 		event.preventDefault();
+		console.log('event', event);
 		let newName = $('#new-name').val();
 		let newVal = $('#new-val').val(); 
 
