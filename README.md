@@ -1,20 +1,23 @@
 # Storage-Wars
-Demo of session storage, local storage, cookies and indexdb
+
+App demonstrating session storage, local storage, cookies and indexdb
+
+Try adding an item and then test refreshing your browser, opening a new tab or closing the window completely. What persists? (Fun, that's what!)
+
+Link: https://krosenk729.github.io/Storage-Wars/
 
 ---
 
-https://krosenk729.github.io/Storage-Wars/
+### See It In Action
 
----
 
-### Add a Name / Value Pair...
-...and see what storage items appear then test by opening a new tab or refreshing your window to see what persists 
- 
+_*Background has a custom canvas snowfall*_
+
 ![demo if you are curious](https://github.com/krosenk729/Storage-Wars/blob/master/screenshots/samplegif.gif)
-![demo if you are curious](https://raw.githubusercontent.com/krosenk729/Storage-Wars/master/screenshots/samplegif.gif)
 
+---
 
-_*Add storage items and they appear in each box*_
+_*Add storage items and they appear in respective boxes*_
 
 
 ![saved items](https://raw.githubusercontent.com/krosenk729/Storage-Wars/master/screenshots/saved-storage.png)
